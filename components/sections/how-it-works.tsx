@@ -1,4 +1,5 @@
 import React from "react";
+import SplitText from "@/components/ui/SplitText";
 
 const STEPS = [
   {
@@ -31,12 +32,8 @@ export function HowItWorksSection() {
           <span className="text-xs font-bold text-accent bg-accent/10 px-3.5 py-1.5 rounded-full border border-accent/20 inline-block uppercase tracking-widest">
             The Process
           </span>
-          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl text-text-primary font-extrabold tracking-tight">
-            How LearnFlow works
-          </h2>
-          <p className="text-text-secondary text-lg sm:text-xl leading-relaxed">
-            From goal to mastery in three simple steps — fully guided by AI.
-          </p>
+          <SplitText text="How LearnFlow works" tag="h2" className="font-display text-4xl sm:text-5xl lg:text-6xl text-text-primary font-extrabold tracking-tight" />
+          <SplitText text="From goal to mastery in three simple steps — fully guided by AI." className="text-text-secondary text-lg sm:text-xl leading-relaxed" />
         </div>
 
         {/* Steps Container */}
@@ -58,12 +55,8 @@ export function HowItWorksSection() {
 
                 {/* Card container */}
                 <div className="w-full p-6 sm:p-8 rounded-2xl bg-surface-1 border border-white/5 hover:border-accent/20 hover:-translate-y-[2px] hover:shadow-[0_8px_30px_rgba(16,185,129,0.02)] transition-all duration-300 flex-1 flex flex-col justify-start">
-                  <h3 className="text-xl font-bold text-text-primary mb-3">
-                    {step.title}
-                  </h3>
-                  <p className="text-text-secondary text-sm sm:text-base leading-relaxed">
-                    {step.text}
-                  </p>
+                  <SplitText text={step.title} tag="h3" className="text-xl font-bold text-text-primary mb-3" />
+                  <SplitText text={step.text} className="text-text-secondary text-sm sm:text-base leading-relaxed" />
                 </div>
               </div>
             ))}

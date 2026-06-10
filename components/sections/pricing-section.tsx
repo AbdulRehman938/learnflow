@@ -1,4 +1,5 @@
 import React from "react";
+import SplitText from "@/components/ui/SplitText";
 
 const PLANS = [
   {
@@ -66,12 +67,8 @@ export function PricingSection() {
           <span className="text-xs font-bold text-accent bg-accent/10 px-3.5 py-1.5 rounded-full border border-accent/20 inline-block uppercase tracking-widest">
             Pricing
           </span>
-          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl text-text-primary font-extrabold tracking-tight">
-            Simple pricing for everyone
-          </h2>
-          <p className="text-text-secondary text-lg sm:text-xl leading-relaxed">
-            Start free, upgrade when you need more power. No hidden costs, no surprises.
-          </p>
+          <SplitText text="Simple pricing for everyone" tag="h2" className="font-display text-4xl sm:text-5xl lg:text-6xl text-text-primary font-extrabold tracking-tight" />
+          <SplitText text="Start free, upgrade when you need more power. No hidden costs, no surprises." className="text-text-secondary text-lg sm:text-xl leading-relaxed" />
         </div>
 
         {/* Pricing Cards */}
@@ -112,9 +109,7 @@ export function PricingSection() {
                       </span>
                     )}
                   </div>
-                  <p className="text-text-secondary text-sm leading-relaxed">
-                    {plan.description}
-                  </p>
+                  <SplitText text={plan.description} className="text-text-secondary text-sm leading-relaxed" />
                 </div>
 
                 {/* Divider */}
@@ -134,9 +129,7 @@ export function PricingSection() {
                       >
                         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                       </svg>
-                      <span className="text-text-secondary text-sm leading-relaxed">
-                        {feature}
-                      </span>
+                      <SplitText text={feature} tag="span" className="text-text-secondary text-sm leading-relaxed" />
                     </li>
                   ))}
                 </ul>
@@ -159,9 +152,7 @@ export function PricingSection() {
         </div>
 
         {/* Footer Trust Note */}
-        <p className="text-center text-text-muted text-sm mt-12 leading-relaxed">
-          You can cancel anytime. No hidden fees. Upgrade or downgrade whenever you want.
-        </p>
+        <SplitText text="You can cancel anytime. No hidden fees. Upgrade or downgrade whenever you want." className="text-center text-text-muted text-sm mt-12 leading-relaxed" />
 
       </div>
     </section>
