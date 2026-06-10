@@ -1,4 +1,60 @@
 import Image from "next/image";
+import {
+  RiAlertLine,
+  RiRouteLine,
+  RiHistoryLine,
+  RiGroupLine,
+  RiCpuLine,
+  RiGitBranchLine,
+  RiBrainLine,
+  RiSparklingLine
+} from "react-icons/ri";
+
+const PROBLEMS = [
+  {
+    title: "Overwhelming Content",
+    text: "Students waste hours trying to figure out what to learn next.",
+    icon: RiAlertLine
+  },
+  {
+    title: "No Clear Learning Path",
+    text: "Most platforms throw random lessons without structure or guidance.",
+    icon: RiRouteLine
+  },
+  {
+    title: "Poor Retention",
+    text: "Learners forget what they study because there is no reinforcement system.",
+    icon: RiHistoryLine
+  },
+  {
+    title: "No Personalization",
+    text: "Everyone gets the same content, regardless of skill level or goals.",
+    icon: RiGroupLine
+  }
+];
+
+const SOLUTIONS = [
+  {
+    title: "AI Learning Paths",
+    text: "Automatically generates a step-by-step learning roadmap tailored to your goals.",
+    icon: RiCpuLine
+  },
+  {
+    title: "Structured Progress System",
+    text: "Every topic is organized into clear, logical learning sequences.",
+    icon: RiGitBranchLine
+  },
+  {
+    title: "Smart Reinforcement",
+    text: "Revisits weak areas using spaced repetition and adaptive practice.",
+    icon: RiBrainLine
+  },
+  {
+    title: "Personalized Experience",
+    text: "Adjusts difficulty and content based on your performance in real time.",
+    icon: RiSparklingLine
+  }
+];
 
 export default function MarketingHomePage() {
   return (
@@ -186,6 +242,118 @@ export default function MarketingHomePage() {
                 <div className="w-6 h-6 rounded-tl-xl rounded-br-xl bg-white"></div> Initech
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Problem & Solution Section */}
+      <section className="relative py-24 lg:py-32 bg-bg-1 border-t border-border/40 z-10 overflow-hidden">
+        {/* Subtle decorative blurs */}
+        <div className="absolute top-1/3 left-0 -translate-x-1/2 w-[500px] h-[500px] bg-red-500/5 blur-[150px] rounded-full pointer-events-none" />
+        <div className="absolute bottom-1/3 right-0 translate-x-1/2 w-[500px] h-[500px] bg-accent/5 blur-[150px] rounded-full pointer-events-none" />
+
+        <div className="content-wrap relative z-20">
+          
+          {/* Main Heading & Description */}
+          <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 text-xs font-bold text-accent bg-accent/10 border border-accent/20 rounded-full uppercase tracking-widest">
+              <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></span>
+              Compare the Experience
+            </div>
+            <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl text-text-primary font-extrabold tracking-tight">
+              Why LearnFlow?
+            </h2>
+            <p className="text-text-secondary text-lg sm:text-xl leading-relaxed">
+              Traditional education platforms are designed for passive consumption. LearnFlow builds structured paths for active mastery. Here is how we fix it.
+            </p>
+          </div>
+
+          <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+            {/* Desktop Vertical Divider Line */}
+            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-[1px] bg-border/40 -translate-x-1/2 pointer-events-none z-0" />
+            
+            {/* LEFT SIDE — PROBLEMS */}
+            <div className="flex flex-col gap-8">
+              <div className="space-y-4">
+                <span className="text-xs font-bold text-red-400/80 uppercase tracking-widest bg-red-500/10 px-3.5 py-1.5 rounded-full border border-red-500/20 inline-block">
+                  The Problem
+                </span>
+                <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-text-primary font-extrabold tracking-tight">
+                  Traditional learning is broken
+                </h2>
+              </div>
+              
+              <div className="flex flex-col gap-6">
+                {PROBLEMS.map((prob, index) => {
+                  const Icon = prob.icon;
+                  return (
+                    <div key={index} className="relative pl-14">
+                      {/* Vertical path line segment */}
+                      {index < 3 && (
+                        <div className="absolute left-[18px] top-10 bottom-[-24px] w-[1px] bg-border/40 z-0 pointer-events-none" />
+                      )}
+                      
+                      {/* Icon Node */}
+                      <div className="absolute left-0 top-[6px] p-2 rounded-lg bg-bg-1 border border-border/60 text-red-400 z-10 shrink-0 flex items-center justify-center shadow-md">
+                        <Icon className="w-5 h-5" />
+                      </div>
+                      
+                      {/* Card Content */}
+                      <div className="p-5 sm:p-6 rounded-xl bg-surface-1/20 border border-red-500/10 hover:border-red-500/25 hover:-translate-y-[2px] hover:shadow-[0_8px_30px_rgba(239,68,68,0.03)] transition-all duration-300">
+                        <h3 className="text-lg font-bold text-red-400 mb-2">
+                          {prob.title}
+                        </h3>
+                        <p className="text-text-secondary text-sm sm:text-base leading-relaxed">
+                          {prob.text}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* RIGHT SIDE — SOLUTIONS */}
+            <div className="flex flex-col gap-8">
+              <div className="space-y-4">
+                <span className="text-xs font-bold text-accent bg-accent/10 px-3.5 py-1.5 rounded-full border border-accent/20 inline-block uppercase tracking-widest">
+                  The Solution
+                </span>
+                <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-text-primary font-extrabold tracking-tight">
+                  LearnFlow fixes this
+                </h2>
+              </div>
+
+              <div className="flex flex-col gap-6">
+                {SOLUTIONS.map((sol, index) => {
+                  const Icon = sol.icon;
+                  return (
+                    <div key={index} className="relative pl-14">
+                      {/* Vertical path line segment */}
+                      {index < 3 && (
+                        <div className="absolute left-[18px] top-10 bottom-[-24px] w-[1px] bg-border/40 z-0 pointer-events-none" />
+                      )}
+                      
+                      {/* Icon Node */}
+                      <div className="absolute left-0 top-[6px] p-2 rounded-lg bg-bg-1 border border-border/60 text-accent z-10 shrink-0 flex items-center justify-center shadow-md">
+                        <Icon className="w-5 h-5" />
+                      </div>
+
+                      {/* Card Content */}
+                      <div className="p-5 sm:p-6 rounded-xl bg-surface-1/20 border border-accent/10 hover:border-accent/25 hover:-translate-y-[2px] hover:shadow-[0_8px_30px_rgba(16,185,129,0.05)] transition-all duration-300">
+                        <h3 className="text-lg font-bold text-accent mb-2">
+                          {sol.title}
+                        </h3>
+                        <p className="text-text-secondary text-sm sm:text-base leading-relaxed">
+                          {sol.text}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
