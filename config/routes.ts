@@ -1,0 +1,38 @@
+export const routes = {
+  home: "/",
+  about: "/about",
+  features: "/features",
+  pricing: "/pricing",
+  login: "/login",
+  signup: "/signup",
+  forgotPassword: "/forgot-password",
+  resetPassword: "/reset-password",
+  checkout: "/checkout",
+  checkoutSuccess: "/checkout/success",
+  checkoutCancel: "/checkout/cancel",
+  dashboard: {
+    user: {
+      home: "/user",
+      courses: "/user/courses",
+      course: (id: string) => `/user/courses/${id}`,
+      progress: "/user/progress",
+      goals: "/user/goals",
+      settings: "/user/settings",
+    },
+    tutor: {
+      home: "/tutor",
+      courses: "/tutor/courses",
+      newCourse: "/tutor/courses/new",
+      course: (id: string) => `/tutor/courses/${id}`,
+      uploads: "/tutor/uploads",
+      earnings: "/tutor/earnings",
+    },
+    admin: {
+      home: "/admin",
+      users: "/admin/users",
+      courses: "/admin/courses",
+      analytics: "/admin/analytics",
+      settings: "/admin/settings",
+    },
+  },
+};

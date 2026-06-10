@@ -1,0 +1,36 @@
+/**
+ * LearnFlow Design System – Token Reference
+ * All tokens are registered in tailwind.config.ts.
+ * Use Tailwind classes exclusively; do NOT add ad-hoc custom colors here.
+ *
+ * Base Dark Layers
+ *   bg-bg-0        #070A0F   – deep background
+ *   bg-bg-1        #0B1220   – main app background
+ *   bg-surface-1   #111827   – cards / panels
+ *   bg-surface-2   #1F2937   – elevated cards
+ *   bg-surface-3   #273244   – hover / raised elements
+ *
+ * Text System
+ *   text-text-primary   #F9FAFB
+ *   text-text-secondary #D1D5DB
+ *   text-text-muted     #9CA3AF
+ *   text-text-faint     #6B7280
+ *
+ * Accent (Emerald)
+ *   text-accent / bg-accent          #10B981
+ *   text-accent-dark / bg-accent-dark #059669
+ *   text-accent-light                 #34D399
+ *   bg-accent-soft                    rgba(16,185,129,0.15)
+ *
+ * State Colors
+ *   success #10B981  |  warning #F59E0B  |  error #EF4444  |  info #3B82F6
+ *
+ * Border & Structure
+ *   border-border        rgba(255,255,255,0.08)
+ *   border-border-strong rgba(255,255,255,0.15)
+ *   divide-divider       rgba(255,255,255,0.05)
+ *   bg-hover             rgba(255,255,255,0.06)
+ *
+ * Shadows (use as Tailwind shadow-* classes)
+ *   shadow-sm   | shadow-md   | shadow-glow
+ */

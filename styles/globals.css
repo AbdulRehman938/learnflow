@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@import "./variables.css";
+@import "./typography.css";
+
+@layer base {
+  * {
+    border-color: rgba(255,255,255,0.08); /* border token */
+  }
+
+  body {
+    background-color: #0B1220; /* bg-1 */
+    color: #F9FAFB;           /* text-primary */
+    font-family: var(--font-sans), system-ui, sans-serif;
+  }
+}
