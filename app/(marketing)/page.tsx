@@ -12,6 +12,9 @@ import {
 import { FeaturesSection } from "@/components/sections/features-section";
 import { HowItWorksSection } from "@/components/sections/how-it-works";
 import { PricingSection } from "@/components/sections/pricing-section";
+import { CtaFooter } from "@/components/sections/cta-footer";
+import SplitText from "@/components/ui/SplitText";
+import { WhatIsLearnflow } from "@/components/sections/what-is-learnflow";
 
 const PROBLEMS = [
   {
@@ -71,7 +74,7 @@ export default function MarketingHomePage() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative flex flex-col justify-center min-h-screen lg:min-h-[750px] lg:h-[calc(100vh-4rem)] lg:max-h-[900px] pt-0 pb-12 z-10">
+      <section id="hero" className="relative flex flex-col justify-center min-h-screen lg:min-h-[750px] lg:h-[calc(100vh-4rem)] lg:max-h-[900px] pt-0 pb-12 z-10">
         <div className="content-wrap flex-1 flex flex-col justify-center">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center flex-1 py-12 pt-10">
             
@@ -82,18 +85,14 @@ export default function MarketingHomePage() {
                 AI-Powered Learning System
               </div>
               
-              <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl xl:text-[5.5rem] text-text-primary mb-8 leading-[1.1] tracking-tighter font-extrabold">
-                Learn smarter.<br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-br from-white via-accent-light to-accent">
-                  Not harder.
-                </span>
+              <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl xl:text-[5.5rem] text-text-primary mb-8 leading-[1.1] tracking-tighter font-extrabold flex flex-col items-start gap-1">
+                <SplitText text="Learn smarter." className="pb-2" />
+                <SplitText text="Not harder." className="text-transparent bg-clip-text bg-gradient-to-br from-white via-accent-light to-accent pb-4" />
               </h1>
               
-              <p className="text-text-secondary text-lg sm:text-xl lg:text-2xl max-w-lg mb-12 leading-relaxed font-medium">
-                LearnFlow builds adaptive learning paths, tracks your progress, and helps you master skills faster using AI-driven guidance.
-              </p>
+              <SplitText text="Stop guessing what to learn next. LearnFlow builds a personalized curriculum, tracks your progress, and adapts to your pace in real time." textAlign="left" className="text-text-secondary text-lg sm:text-xl lg:text-2xl leading-relaxed max-w-2xl" />
               
-              <div className="flex flex-col w-full sm:w-auto sm:flex-row items-center gap-5">
+              <div className="flex flex-col w-full sm:w-auto sm:flex-row items-center gap-5 mt-12">
                 <a
                   href="/signup"
                   className="w-full sm:w-auto px-10 py-4 rounded-lg font-bold text-lg bg-accent text-bg-0 hover:bg-accent-light hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(16,185,129,0.4)] transition-all duration-300 text-center flex items-center justify-center gap-2 group"
@@ -127,7 +126,7 @@ export default function MarketingHomePage() {
                     </div>
                   ))}
                 </div>
-                <p>Join 10,000+ students already learning</p>
+                <SplitText text="Join 10,000+ students already learning" />
               </div>
             </div>
 
@@ -193,7 +192,7 @@ export default function MarketingHomePage() {
 
                       {/* Active Course Card */}
                       <div className="bg-surface-2/80 border border-border rounded-xl p-5 sm:p-6 shadow-xl flex flex-col justify-center">
-                        <span className="text-xs font-bold text-text-muted uppercase tracking-widest mb-2">Active Course</span>
+                        <span className="text-sm font-bold text-accent px-2 uppercase tracking-widest">LearnFlow 2.0 is live</span>
                         <span className="text-lg sm:text-xl font-extrabold text-text-primary truncate">Frontend Mastery</span>
                         <div className="mt-4 flex gap-1.5">
                           <div className="h-2 w-10 bg-accent rounded-full shadow-glow"></div>
@@ -249,8 +248,10 @@ export default function MarketingHomePage() {
         </div>
       </section>
 
+      <WhatIsLearnflow />
+
       {/* Problem & Solution Section */}
-      <section className="relative py-24 lg:py-32 bg-bg-1 border-t border-border/40 z-10 overflow-hidden">
+      <section id="why-learnflow" className="relative py-24 lg:py-32 bg-bg-1 border-t border-border/40 z-10 overflow-hidden">
         {/* Subtle decorative blurs */}
         <div className="absolute top-1/3 left-0 -translate-x-1/2 w-[500px] h-[500px] bg-red-500/5 blur-[150px] rounded-full pointer-events-none" />
         <div className="absolute bottom-1/3 right-0 translate-x-1/2 w-[500px] h-[500px] bg-accent/5 blur-[150px] rounded-full pointer-events-none" />
@@ -263,12 +264,8 @@ export default function MarketingHomePage() {
               <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></span>
               Compare the Experience
             </div>
-            <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl text-text-primary font-extrabold tracking-tight">
-              Why LearnFlow?
-            </h2>
-            <p className="text-text-secondary text-lg sm:text-xl leading-relaxed">
-              Traditional education platforms are designed for passive consumption. LearnFlow builds structured paths for active mastery. Here is how we fix it.
-            </p>
+            <SplitText text="Why LearnFlow?" tag="h2" className="font-display text-4xl sm:text-5xl lg:text-6xl text-text-primary font-extrabold tracking-tight" />
+            <SplitText text="Traditional education platforms are designed for passive consumption. LearnFlow builds structured paths for active mastery. Here is how we fix it." className="text-text-secondary text-lg sm:text-xl leading-relaxed" />
           </div>
 
           <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
@@ -281,9 +278,7 @@ export default function MarketingHomePage() {
                 <span className="text-xs font-bold text-red-400/80 uppercase tracking-widest bg-red-500/10 px-3.5 py-1.5 rounded-full border border-red-500/20 inline-block">
                   The Problem
                 </span>
-                <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-text-primary font-extrabold tracking-tight">
-                  Traditional learning is broken
-                </h2>
+                <SplitText text="Traditional learning is broken" tag="h2" className="font-display text-3xl sm:text-4xl lg:text-5xl text-text-primary font-extrabold tracking-tight" />
               </div>
               
               <div className="flex flex-col gap-6">
@@ -319,12 +314,10 @@ export default function MarketingHomePage() {
             {/* RIGHT SIDE — SOLUTIONS */}
             <div className="flex flex-col gap-8">
               <div className="space-y-4">
-                <span className="text-xs font-bold text-accent bg-accent/10 px-3.5 py-1.5 rounded-full border border-accent/20 inline-block uppercase tracking-widest">
+                <span className="text-xs font-bold text-accent uppercase tracking-widest bg-accent/10 px-3.5 py-1.5 rounded-full border border-accent/20 inline-block">
                   The Solution
                 </span>
-                <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-text-primary font-extrabold tracking-tight">
-                  LearnFlow fixes this
-                </h2>
+                <SplitText text="LearnFlow fixes this" tag="h2" className="font-display text-3xl sm:text-4xl lg:text-5xl text-text-primary font-extrabold tracking-tight" />
               </div>
 
               <div className="flex flex-col gap-6">
@@ -361,9 +354,10 @@ export default function MarketingHomePage() {
         </div>
       </section>
 
-        <FeaturesSection />
-        <HowItWorksSection />
-        <PricingSection />
-      </div>
-    );
+      <div id="features"><FeaturesSection /></div>
+      <div id="how-it-works"><HowItWorksSection /></div>
+      <div id="pricing"><PricingSection /></div>
+      <CtaFooter />
+    </div>
+  );
 }

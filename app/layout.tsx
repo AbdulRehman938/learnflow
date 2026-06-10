@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { inter, spaceGrotesk } from "@/fonts";
 import { CursorGlow } from "@/components/ui/cursor-glow";
+import { SmoothScroll } from "@/components/providers/smooth-scroll";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -24,6 +25,7 @@ export default function RootLayout({
       className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}
     >
       <body suppressHydrationWarning>
+        <SmoothScroll />
         <CursorGlow />
         {children}
       </body>

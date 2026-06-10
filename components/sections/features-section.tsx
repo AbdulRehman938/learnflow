@@ -1,4 +1,5 @@
 import React from "react";
+import SplitText from "@/components/ui/SplitText";
 
 const FEATURES = [
   {
@@ -71,12 +72,8 @@ export function FeaturesSection() {
           <span className="text-xs font-bold text-accent bg-accent/10 px-3.5 py-1.5 rounded-full border border-accent/20 inline-block uppercase tracking-widest">
             Core Platform
           </span>
-          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl text-text-primary font-extrabold tracking-tight">
-            Everything you need to learn faster
-          </h2>
-          <p className="text-text-secondary text-lg sm:text-xl leading-relaxed">
-            LearnFlow combines AI, structure, and personalization to create a complete learning system designed for real progress.
-          </p>
+          <SplitText text="Everything you need to learn faster" tag="h2" className="font-display text-4xl sm:text-5xl lg:text-6xl text-text-primary font-extrabold tracking-tight" />
+          <SplitText text="LearnFlow combines AI, structure, and personalization to create a complete learning system designed for real progress." className="text-text-secondary text-lg sm:text-xl leading-relaxed" />
         </div>
 
         {/* Feature Grid */}
@@ -93,12 +90,8 @@ export function FeaturesSection() {
               
               {/* Card Text Content */}
               <div className="space-y-2">
-                <h3 className="text-xl font-bold text-text-primary">
-                  {feat.title}
-                </h3>
-                <p className="text-text-secondary text-sm sm:text-base leading-relaxed">
-                  {feat.text}
-                </p>
+                <SplitText text={feat.title} tag="h3" className="text-xl font-bold text-text-primary" />
+                <SplitText text={feat.text} className="text-text-secondary text-sm sm:text-base leading-relaxed" />
               </div>
             </div>
           ))}
