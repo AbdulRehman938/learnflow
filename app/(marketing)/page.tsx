@@ -10,6 +10,7 @@ import {
   RiSparklingLine
 } from "react-icons/ri";
 import { FeaturesSection } from "@/components/sections/features-section";
+import { HowItWorksSection } from "@/components/sections/how-it-works";
 
 const PROBLEMS = [
   {
@@ -360,6 +361,7 @@ export default function MarketingHomePage() {
       </section>
 
         <FeaturesSection />
+        <HowItWorksSection />
       </div>
     );
-  }
+}
