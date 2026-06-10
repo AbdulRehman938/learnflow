@@ -9,6 +9,7 @@ import {
   RiBrainLine,
   RiSparklingLine
 } from "react-icons/ri";
+import { FeaturesSection } from "@/components/sections/features-section";
 
 const PROBLEMS = [
   {
@@ -357,6 +358,8 @@ export default function MarketingHomePage() {
           </div>
         </div>
       </section>
-    </div>
-  );
-}
+
+        <FeaturesSection />
+      </div>
+    );
+  }
