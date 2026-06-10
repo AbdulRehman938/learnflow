@@ -7,10 +7,10 @@ import { usePathname } from "next/navigation";
 import { RiMenuLine, RiCloseLine } from "react-icons/ri";
 
 const NAV_LINKS = [
-  { label: "Features",     href: "/features" },
+  { label: "Features",     href: "/#features" },
   { label: "How it Works", href: "/#how-it-works" },
-  { label: "Pricing",      href: "/pricing" },
-  { label: "About",        href: "/about" },
+  { label: "Pricing",      href: "/#pricing" },
+  { label: "About",        href: "/#about" },
 ] as const;
 
 export function MarketingHeader() {
@@ -87,7 +87,7 @@ export function MarketingHeader() {
               Sign in
             </Link>
             <Link
-              href="/signup"
+              href="/pricing"
               className="px-4 py-2 rounded-md text-sm font-medium bg-accent text-bg-0 hover:bg-accent-light hover:-translate-y-0.5 hover:shadow-glow transition-all duration-300"
             >
               Get Started
@@ -134,7 +134,7 @@ export function MarketingHeader() {
                 Sign in
               </Link>
               <Link
-                href="/signup"
+                href="/pricing"
                 onClick={() => setMenuOpen(false)}
                 className="w-full py-2.5 rounded-md text-sm font-medium text-center bg-accent text-bg-0 hover:bg-accent-dark transition-colors"
               >
