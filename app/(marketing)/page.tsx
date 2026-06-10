@@ -11,6 +11,7 @@ import {
 } from "react-icons/ri";
 import { FeaturesSection } from "@/components/sections/features-section";
 import { HowItWorksSection } from "@/components/sections/how-it-works";
+import { PricingSection } from "@/components/sections/pricing-section";
 
 const PROBLEMS = [
   {
@@ -362,6 +363,7 @@ export default function MarketingHomePage() {
 
         <FeaturesSection />
         <HowItWorksSection />
+        <PricingSection />
       </div>
     );
 }
