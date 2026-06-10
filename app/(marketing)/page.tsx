@@ -95,9 +95,9 @@ export default function MarketingHomePage() {
                 </div>
                 
                 {/* Mockup Internal Layout */}
-                <div className="flex h-[550px]">
+                <div className="flex h-[480px] sm:h-[520px] lg:h-[550px]">
                   {/* Fake Sidebar */}
-                  <div className="w-56 bg-surface-1/30 border-r border-border p-5 flex flex-col gap-4 hidden sm:flex">
+                  <div className="w-48 lg:w-56 bg-surface-1/30 border-r border-border p-5 flex flex-col gap-4 hidden md:flex">
                     <div className="h-10 bg-surface-3/50 rounded-md w-full mb-6"></div>
                     <div className="h-8 bg-surface-2 rounded-md w-3/4"></div>
                     <div className="h-8 bg-surface-2 rounded-md w-5/6"></div>
@@ -108,24 +108,24 @@ export default function MarketingHomePage() {
                   </div>
 
                   {/* Main Mockup Content Area */}
-                  <div className="flex-1 p-8 sm:p-10 flex flex-col gap-8 bg-gradient-to-br from-transparent to-surface-1/20">
-                    <div className="flex justify-between items-end">
-                      <div>
-                        <h2 className="text-3xl font-extrabold text-text-primary mb-2">Learning Dashboard</h2>
-                        <p className="text-base text-text-muted">Welcome back! You're on a 5-day streak.</p>
+                  <div className="flex-1 p-5 sm:p-8 lg:p-10 flex flex-col gap-6 sm:gap-8 bg-gradient-to-br from-transparent to-surface-1/20 min-w-0">
+                    <div className="flex justify-between items-end gap-4">
+                      <div className="min-w-0">
+                        <h2 className="text-2xl sm:text-3xl font-extrabold text-text-primary mb-2 truncate">Learning Dashboard</h2>
+                        <p className="text-sm sm:text-base text-text-muted truncate">Welcome back! You're on a 5-day streak.</p>
                       </div>
-                      <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-accent to-blue-500 p-[2px] shadow-lg">
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-tr from-accent to-blue-500 p-[2px] shadow-lg shrink-0">
                         <div className="w-full h-full bg-surface-1 rounded-full"></div>
                       </div>
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                       {/* Progress Card */}
-                      <div className="bg-surface-2/80 border border-border rounded-xl p-6 shadow-xl relative overflow-hidden group">
+                      <div className="bg-surface-2/80 border border-border rounded-xl p-5 sm:p-6 shadow-xl relative overflow-hidden group">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 blur-3xl rounded-full group-hover:bg-accent/20 transition-all"></div>
-                        <div className="flex justify-between items-center text-base font-bold mb-5">
-                          <span className="text-text-secondary">Progress: 68%</span>
-                          <span className="text-accent bg-accent/10 px-2 py-1 rounded-md text-xs border border-accent/20">Keep it up!</span>
+                        <div className="flex justify-between items-center text-sm sm:text-base font-bold mb-5 gap-2">
+                          <span className="text-text-secondary whitespace-nowrap">Progress: 68%</span>
+                          <span className="text-accent bg-accent/10 px-2 py-1 rounded-md text-xs border border-accent/20 whitespace-nowrap">Keep it up!</span>
                         </div>
                         <div className="w-full h-3 bg-surface-3 rounded-full overflow-hidden">
                           <div className="h-full bg-gradient-to-r from-accent-dark to-accent rounded-full w-[68%] shadow-[0_0_15px_rgba(16,185,129,0.5)]"></div>
@@ -133,9 +133,9 @@ export default function MarketingHomePage() {
                       </div>
 
                       {/* Active Course Card */}
-                      <div className="bg-surface-2/80 border border-border rounded-xl p-6 shadow-xl flex flex-col justify-center">
+                      <div className="bg-surface-2/80 border border-border rounded-xl p-5 sm:p-6 shadow-xl flex flex-col justify-center">
                         <span className="text-xs font-bold text-text-muted uppercase tracking-widest mb-2">Active Course</span>
-                        <span className="text-xl font-extrabold text-text-primary">Frontend Mastery</span>
+                        <span className="text-lg sm:text-xl font-extrabold text-text-primary truncate">Frontend Mastery</span>
                         <div className="mt-4 flex gap-1.5">
                           <div className="h-2 w-10 bg-accent rounded-full shadow-glow"></div>
                           <div className="h-2 w-10 bg-accent rounded-full shadow-glow"></div>
@@ -145,17 +145,17 @@ export default function MarketingHomePage() {
                     </div>
 
                     {/* AI Panel Box */}
-                    <div className="mt-auto bg-gradient-to-r from-surface-3/80 to-surface-2/50 border border-accent/30 rounded-xl p-6 flex items-center gap-5 shadow-2xl backdrop-blur-md relative overflow-hidden">
+                    <div className="mt-auto bg-gradient-to-r from-surface-3/80 to-surface-2/50 border border-accent/30 rounded-xl p-4 sm:p-6 flex items-center gap-4 sm:gap-5 shadow-2xl backdrop-blur-md relative overflow-hidden">
                       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay"></div>
                       <div className="w-12 h-12 rounded-full bg-accent/20 border border-accent/40 flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(16,185,129,0.3)]">
                         <div className="w-5 h-5 rounded-full bg-accent animate-ping absolute opacity-50"></div>
                         <div className="w-4 h-4 rounded-full bg-accent"></div>
                       </div>
-                      <div className="flex flex-col">
+                      <div className="flex flex-col min-w-0">
                         <p className="text-base font-extrabold text-text-primary">Ask AI Tutor</p>
-                        <p className="text-sm font-medium text-text-secondary mt-1">I can help you understand React Hooks...</p>
+                        <p className="text-sm font-medium text-text-secondary mt-1 truncate">I can help you understand React Hooks...</p>
                       </div>
-                      <div className="ml-auto px-4 py-2 bg-surface-1 rounded-lg border border-border text-sm font-bold text-text-muted shadow-inner">
+                      <div className="ml-auto px-4 py-2 bg-surface-1 rounded-lg border border-border text-sm font-bold text-text-muted shadow-inner hidden sm:block shrink-0">
                         Press ⌘K
                       </div>
                     </div>
