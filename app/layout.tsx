@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { inter, spaceGrotesk } from "@/fonts";
+import { CursorGlow } from "@/components/ui/cursor-glow";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -22,7 +23,10 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}
     >
-      <body>{children}</body>
+      <body suppressHydrationWarning>
+        <CursorGlow />
+        {children}
+      </body>
     </html>
   );
 }
